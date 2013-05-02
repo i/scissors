@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+
+Signal.trap ("INT") do
+  scissor
+end
+
+Signal.trap("QUIT") do
+  scissor
+end
+
+Signal.trap("KILL") do
+  scissor
+end
+
+
+def scissor
+  (1..90).each do |i|
+    system("clear")
+    print "\t\t\tSSSSSSS  CCCCCC IIIIII SSSSSSS SSSSSSS OOOOOO RRRRRR  SSSSSS\n"
+    print "\t\t\tSS       CC       II   SS      SS      OO  OO RR   RR SS\n"
+    print "\t\t\tSSSSSSS  CC       II   SSSSSSS SSSSSSS OO  OO RRRRRR  SSSSSS\n"
+    print "\t\t\t     SS  CC       II        SS      SS OO  OO RR  RR      SS\n"
+    print "\t\t\tSSSSSSS  CCCCCC IIIIII SSSSSSS SSSSSSS OOOOOO RR   RR SSSSSS\n"
+    print "\n\n\n\n"
+    (0..i).each do |j|
+      print " "
+    end
+    print "%<"
+    (0..90-i).each do|j|
+      print "-"
+    end
+    print "\n\n\t\t Love,\n\t\t\t Ian"
+    print "\n"
+    sleep 0.1
+    system("clear")
+
+    print "\t\t\tSSSSSSS  CCCCCC IIIIII SSSSSSS SSSSSSS OOOOOO RRRRRR  SSSSSS\n"
+    print "\t\t\tSS       CC       II   SS      SS      OO  OO RR   RR SS\n"
+    print "\t\t\tSSSSSSS  CC       II   SSSSSSS SSSSSSS OO  OO RRRRRR  SSSSSS\n"
+    print "\t\t\t     SS  CC       II        SS      SS OO  OO RR  RR      SS\n"
+    print "\t\t\tSSSSSSS  CCCCCC IIIIII SSSSSSS SSSSSSS OOOOOO RR   RR SSSSSS\n"
+    print "\n\n\n\n"
+
+    (0..i).each do |j|
+      print " "
+    end
+    print "%="
+    (0..90-i).each do|j|
+      print "-"
+    end
+    print "\n\n\t\t Love,\n\t\t\t Ian"
+    sleep 0.1
+    system("clear")
+  end
+end
+
+scissor
